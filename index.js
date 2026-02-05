@@ -14,10 +14,11 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // middleware
+app.set("trust proxy", 1);
 const allowedOrigins = [
   "http://localhost:5173",
   "https://chat-app-practice-frontend.vercel.app",
-  "https://chatapp-practice-frontend.vercel.app"
+  "https://chatapp-practice-frontend.vercel.app",
 ];
 
 app.use(
